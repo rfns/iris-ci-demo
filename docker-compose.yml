@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  iris-ci:
+    image: rfns/iris-ci:0.5.3
+    environment:
+      TEST_SUITE: cls
+    volumes:
+      - ./port/:/opt/ci/app
+      - ./.env:/opt/ci/.env
